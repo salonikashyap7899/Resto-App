@@ -1,6 +1,7 @@
 'use client'
 import CustomerHeader from "@/app/_components/CustomerHeader"
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 const Page = (props) => {
     const name = props.params.name;
@@ -17,6 +18,7 @@ const Page = (props) => {
 
     useEffect(() => {
         loadRestaurantDetails()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const loadRestaurantDetails = async () => {
@@ -57,28 +59,34 @@ const Page = (props) => {
                 <h4>Email:{restaurantDetails?.email}</h4>
             </div>
             <div className="food-list-wrapper">
-                {
-                    foodItems.length > 0 ? foodItems.map((item) => (
-                        <div className="list-item">
-                            <div><img style={{ width: 100 }} src={item.img_path} /></div>
+            {foodItems.length > 0 ? (
+        foodItems.map((item) => (
+          <div className="list-item" key={item._id}>
+            <div>
+              <Image 
+                style={{ width: 100 }} 
+                src={item.img_path} 
+                alt={item.name} 
+                width={100} 
+                height={100} 
+              />
+            </div>
 
-                            <div>
-                                <div>Name : {item.name}</div>
-                                <div>Rs.{item.price}</div>
-                                <div className="description">{item.description}</div>
-                                {
-                                    cartIds.includes(item._id) ?
-                                        <button  onClick={()=>removeFromCart(item._id)} >Remove From Cart</button>
-                                        : <button onClick={() => addToCart(item)}>Add to Cart</button>
-
-                                }
-
-                            </div>
-
-                        </div>
-                    ))
-                        : <h1>No Food Items for this Restaurant</h1>
-                }
+            <div>
+              <div>Name: {item.name}</div>
+              <div>Rs.{item.price}</div>
+              <div className="description">{item.description}</div>
+              {cartIds.includes(item._id) ? (
+                <button onClick={() => removeFromCart(item._id)}>Remove From Cart</button>
+              ) : (
+                <button onClick={() => addToCart(item)}>Add to Cart</button>
+              )}
+            </div>
+          </div>
+        ))
+      ) : (
+        <h1>No Food Items for this Restaurant</h1>
+      )}
             </div>
         </div>
     )

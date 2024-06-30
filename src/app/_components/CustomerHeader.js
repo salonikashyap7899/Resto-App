@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from 'next/image';
 
 const CustomerHeader = (props) => {
 
@@ -42,7 +43,7 @@ const CustomerHeader = (props) => {
             }
         }
 
-    }, [props.cartData])
+    }, [cartItem, cartNumber, props, props.cartData])
 
     useEffect(() => {
         if (props.removeCartData) {
@@ -56,7 +57,7 @@ const CustomerHeader = (props) => {
                 localStorage.removeItem('cart')
             }
         }
-    }, [props.removeCartData])
+    }, [cartItem, cartNumber, props.removeCartData])
 
     useEffect(()=>{
 
@@ -77,7 +78,12 @@ const CustomerHeader = (props) => {
     return (
         <div className="header-wrapper">
             <div className="logo">
-                <img style={{ width: 100 }} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" />
+            <Image
+            src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png"
+            alt="Description of the image"
+            style={{ width: 100 }} 
+            width={100}
+        />
             </div>
             <ul>
                 <li>

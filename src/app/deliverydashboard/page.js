@@ -14,7 +14,7 @@ const Page = () => {
         } else {
             getMyOrders(delivery._id);
         }
-    }, []);
+    }, [router]);
 
     const getMyOrders = async (deliveryId) => {
         let response = await fetch('http://localhost:3000/api/deliverypartners/orders/' + deliveryId);

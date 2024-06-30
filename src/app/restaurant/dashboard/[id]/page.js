@@ -14,6 +14,7 @@ const EditFoodItems = (props) => {
 
     useEffect(() => {
         handleLoadFoodItem();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const handleLoadFoodItem = async () => {

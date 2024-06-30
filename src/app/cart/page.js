@@ -4,6 +4,7 @@ import CustomerHeader from '../_components/CustomerHeader';
 import Footer from '../_components/Footer';
 import { DELIVERY_CHARGES, TAX } from '../lib/constant';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const Page = () => {
     const [cartStorage, setCartStorage] = useState([]);
@@ -40,7 +41,7 @@ const Page = () => {
                 {cartStorage.length > 0 ? cartStorage.map(item => (
                     <div className="list-item" key={item._id}>
                         <div className="list-item-block-1">
-                            <img style={{ width: 100 }} src={item.img_path} alt={item.name} />
+                            <Image style={{ width: 100 }} src={item.img_path} alt={item.name} />
                         </div>
                         <div className="list-item-block-2">
                             <div>{item.name}</div>

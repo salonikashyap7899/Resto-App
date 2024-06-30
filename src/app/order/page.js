@@ -23,7 +23,7 @@ const Page = () => {
         if (!total) {
             router.push('/')
         }
-    }, [total])
+    }, [router, total])
 
     const orderNow = async () => {
         let user_id = JSON.parse(localStorage.getItem('user'))._id;

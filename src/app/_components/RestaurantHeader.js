@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname,useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 import { useEffect, useState } from 'react';
 const RestaurantHeader=()=>{
@@ -22,7 +23,7 @@ const RestaurantHeader=()=>{
             setDetails(JSON.parse(data));
             
         }
-    },[])
+    },[pathName, router])
 
     const logout=()=>{
         localStorage.removeItem("restaurantUser");
@@ -31,7 +32,7 @@ const RestaurantHeader=()=>{
     return(
         <div className='header-wrapper'>
             <div className="logo">
-                <img style={{width:100}} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" />
+                <Image style={{width:100}} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" alt='' />
             </div>
             <ul>
             <li>

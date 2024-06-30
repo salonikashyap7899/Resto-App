@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 
 const FoodItemList = () => {
@@ -57,7 +58,7 @@ const FoodItemList = () => {
                         <td>{item.name}</td>
                         <td>{item.price}</td>
                         <td>{item.description}</td>
-                        <td><img src={item.img_path} /> </td>
+                        <td><Image src={item.img_path} alt="" width={0} /> </td>
                         <td><button className="dlt-btn" onClick={()=>deleteFoodItem(item._id)}>Delete</button>
                         <button className="edit-btn" onClick={()=>router.push('dashboard/'+item._id)} >Edit</button></td>
                     </tr>
