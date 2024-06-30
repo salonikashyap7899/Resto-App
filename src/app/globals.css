@@ -1,0 +1,348 @@
+body{
+  padding: 0;
+  margin: 0;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+*:focus{
+  outline: none;
+}
+.header-wrapper{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.header-wrapper ul {
+display: flex;
+}
+
+.header-wrapper ul li {
+  list-style-type: none;
+  padding: 5px;
+
+}
+.header-wrapper ul li a{
+  text-decoration: none;
+  color: rgb(204, 74, 74);
+}
+
+.header-wrapper ul li button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgb(204, 74, 74);
+  font-size: 16px;
+}
+
+.footer-wrapper{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  background-color: #fff;
+}
+
+
+.input-wrapper{
+margin: 10px;
+}
+.input-field{
+  width: 200px;
+  height: 30px; 
+  border: none;
+  border-bottom: 1px solid rgb(204, 74, 74);
+
+}
+.button{
+  width: 200px;
+  height: 30px;
+  border: none;
+  background-color:   rgb(204, 74, 74);
+  color: #000;
+  font-size: 14px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.container{
+  text-align: center;
+
+
+}
+.button-link{
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(204, 74, 74);;
+  margin: 20px;
+}
+.input-error{
+  position: absolute;
+  padding: 8px;
+  color: rgb(204, 74, 74);;
+  font-size: 13px;
+}
+table, th, td{
+  border:  1px solid #000 ;
+  border-collapse: collapse;
+  font-size: bold;
+  padding: 10px;
+}
+table td button{
+  margin: 5px;
+  cursor: pointer;
+
+}
+table img {
+  width: 80px;
+}
+
+.main-page-banner,.restaurant-page-banner{
+  background-image: url('https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+height: 230px;
+text-align: center;
+padding: 30px;
+background-size: cover;
+background-repeat: no-repeat;
+background-color: rgba(0, 0, 0, 0.5);
+background-blend-mode: multiply;
+color: #fff;
+}
+
+.main-page-banner .input-wrapper{
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+}
+
+.main-page-banner .select-input{
+  height: 40px;
+  border: none;
+  padding-left: 15px;
+  width: 25%;
+  }
+.main-page-banner .search-input{
+height: 40px;
+border: none;
+padding-left: 15px;
+border-left: 1px solid #ccc;
+width: 45%;
+}
+.main-page-banner h1{
+   color: rgb(204, 74, 74);
+}
+
+
+.location-list {
+  color: #000;
+  list-style-type: none;
+  text-align: left;
+  position: absolute;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  margin-left: -5px;
+  border: 1px solid #ccc;
+}
+.location-list li {
+  width: 180px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.restaurant-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures space between elements */
+  margin: 0 5%; /* Reduced left and right margins */
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.restaurant-wrapper {
+  width: calc(33.33% - 20px); /* Adjusted width to fit three items in a row */
+  background-color: rgb(204, 74, 74);
+  margin: 10px 0; /* Vertical margin */
+  padding: 13px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.restaurant-wrapper1{
+  width: calc(33.33% - 20px); /* Adjusted width to fit three items in a row */
+  background-color: rgb(204, 74, 74);
+  margin: 10px 0; /* Vertical margin */
+  padding: 13px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-direction: column;
+  /* box-sizing: border-box; */
+}
+.restaurant-wrapper .heading-wrapper, .restaurant-wrapper .address-wrapper {
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.restaurant-wrapper h5{
+  margin-left: 15px;
+}
+.restaurant-wrapper .address{
+  margin-left: 5px;
+}
+.restaurant-page-banner h1{
+  font-size: 65px;
+  color: rgb(204, 74, 74);
+}
+.details-wrapper {
+  display: flex;
+  background-color: rgb(204, 74, 74);;
+}
+.details-wrapper h4{
+width: 50%;
+}
+
+.food-list-wrapper{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.food-list-wrapper .list-item {
+  color: rgb(204, 74, 74);;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  padding: 20px;
+  display: flex;
+  text-transform: capitalize;
+}
+.food-list-wrapper .list-item .description{
+  font-weight: lighter;
+}
+.food-list-wrapper .list-item button {
+  color: #fff;
+  background-color: rgb(204, 74, 74);;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.food-list-wrapper .list-item img{
+  width: 100px;
+  padding-right: 20px;
+}
+
+.list-item-block-1{
+  width: 20%;
+}
+.list-item-block-2{
+  width: 60%;
+}
+.list-item-block-3{
+  width: 20%;
+}
+.total-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  text-align: center;
+  margin-left: 20%;
+
+}
+
+.total-wrapper .row{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: rgb(204, 74, 74);;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.total-wrapper  h3{
+  text-align: center;
+}
+.total-wrapper  .block-1{
+  width: 70%;
+}
+.total-wrapper .block-2{
+     width: 30%;
+     margin-left: 36%;
+}
+
+ .block-2 button{
+  padding: 10px 25px;
+  border: navajowhite;
+  background-color: rgb(204, 74, 74);;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+
+  
+}
+.btn-for-order{
+  margin-top: 18%;
+
+}
+
+.auth-container{
+  display: flex;
+}
+
+.login-wrapper,.signup-wrapper{
+  height: 400px;
+  border: 1px solid #ccc;
+  margin: 50px;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+}
+.links-button {
+  /* Any existing styles */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between the buttons as needed */
+  margin: 10px 0; /* Optional: Add margin to separate buttons from other content */
+}
+
+.add-food-link,
+.add-food-dash {
+  background-color: rgb(204, 74, 74);;;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+}
+.maine-head{
+  text-align: center;
+  
+}
+
+.food-items{
+  margin-left: 28%;
+}
+.dlt-btn, .edit-btn{
+  padding: 9px 9px;
+  background-color: rgb(204, 74, 74);
+  border: none;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(222, 38, 38);
+  border-radius: 12px;
+}
+::-webkit-scrollbar{
+  width: 7px;
+  height: 15px;
+}
